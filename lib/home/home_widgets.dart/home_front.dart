@@ -1,6 +1,7 @@
 import 'package:devfest_demo/agenda/agenda_page.dart';
 import 'package:devfest_demo/config/config_bloc.dart';
 import 'package:devfest_demo/speakers/speaker_page.dart';
+import 'package:devfest_demo/sponsors/sponsor_page.dart';
 import 'package:devfest_demo/universal/image_card.dart';
 import 'package:devfest_demo/utils/devfest.dart';
 import 'package:devfest_demo/utils/tools.dart';
@@ -38,40 +39,40 @@ class HomeFront extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
             IconButton(
+              icon: Icon(FontAwesomeIcons.chrome),
+              onPressed: () async {
+                await _launchURL("https://devfest.gdgmad.com");
+              },
+            ),
+            IconButton(
               icon: Icon(FontAwesomeIcons.facebookF),
               onPressed: () async {
-                await _launchURL("https://facebook.com/imthepk");
+                await _launchURL("https://www.facebook.com/gdgmadmeetup");
               },
             ),
             IconButton(
               icon: Icon(FontAwesomeIcons.twitter),
               onPressed: () async {
-                await _launchURL("https://twitter.com/imthepk");
+                await _launchURL("https://twitter.com/gdgmad");
               },
             ),
             IconButton(
               icon: Icon(FontAwesomeIcons.linkedinIn),
               onPressed: () async {
-                _launchURL("https://linkedin.com/in/imthepk");
-              },
-            ),
-            IconButton(
-              icon: Icon(FontAwesomeIcons.youtube),
-              onPressed: () async {
-                await _launchURL("https://youtube.com/mtechviral");
+                _launchURL("https://www.linkedin.com/company/gdg-mad-mumbai/");
               },
             ),
             IconButton(
               icon: Icon(FontAwesomeIcons.meetup),
               onPressed: () async {
-                await _launchURL("https://meetup.com/");
+                await _launchURL("https://www.meetup.com/gdg-mad");
               },
             ),
             IconButton(
               icon: Icon(FontAwesomeIcons.envelope),
               onPressed: () async {
                 var emailUrl =
-                    '''mailto:mtechviral@gmail.com?subject=Support Needed For DevFest App&body={Name: Pawan Kumar},Email: pawan221b@gmail.com}''';
+                    '''mailto:team@gdgmad.com''';
                 var out = Uri.encodeFull(emailUrl);
                 await _launchURL(out);
               },
@@ -108,7 +109,8 @@ class HomeFront extends StatelessWidget {
             icon: Icons.attach_money,
             color: Colors.purple,
             title: Devfest.sponsor_text,
-            onPressed: () => {},
+            onPressed: () => 
+                Navigator.pushNamed(context, SponsorPage.routeName),
           ),
           ActionCard(
             icon: Icons.question_answer,
