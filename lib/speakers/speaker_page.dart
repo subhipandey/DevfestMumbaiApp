@@ -11,11 +11,10 @@ import 'package:url_launcher/url_launcher.dart';
 class SpeakersPage extends StatelessWidget {
   static const String routeName = "/speakers";
 
-  Widget socialActions(context, Speaker speaker) => FittedBox(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
-            IconButton(
+  Widget socialActions(context, Speaker speaker) {
+    var iconButtons = new List<Widget>();
+    if(speaker.fbUrl!=null) {
+      iconButtons.add(IconButton(
               icon: Icon(
                 FontAwesomeIcons.facebookF,
                 size: 15,
@@ -23,26 +22,10 @@ class SpeakersPage extends StatelessWidget {
               onPressed: () {
                 launch(speaker.fbUrl);
               },
-            ),
-            IconButton(
-              icon: Icon(
-                FontAwesomeIcons.twitter,
-                size: 15,
-              ),
-              onPressed: () {
-                launch(speaker.twitterUrl);
-              },
-            ),
-            IconButton(
-              icon: Icon(
-                FontAwesomeIcons.linkedinIn,
-                size: 15,
-              ),
-              onPressed: () {
-                launch(speaker.linkedinUrl);
-              },
-            ),
-            IconButton(
+            ));
+    }
+    if(speaker.githubUrl!=null) {
+      iconButtons.add(IconButton(
               icon: Icon(
                 FontAwesomeIcons.github,
                 size: 15,
@@ -50,11 +33,30 @@ class SpeakersPage extends StatelessWidget {
               onPressed: () {
                 launch(speaker.githubUrl);
               },
-            ),
-          ],
+            ));
+    }
+
+    if(speaker.twitterUrl!=null) {
+      iconButtons.add(IconButton(
+              icon: Icon(
+                FontAwesomeIcons.twitter,
+                size: 15,
+              ),
+              onPressed: () {
+                launch(speaker.twitterUrl);
+              },
+            ));
+    }
+   return FittedBox(
+        child: Container(
+          constraints: BoxConstraints(minWidth: 230.0, minHeight: 25.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: iconButtons,
+          ),
         ),
       );
-
+  }
   @override
   Widget build(BuildContext context) {
     return DevScaffold(
