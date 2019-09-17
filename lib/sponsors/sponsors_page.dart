@@ -1,9 +1,11 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:devfest_demo/universal/dev_scaffold.dart';
 import 'package:flutter/material.dart';
+import 'package:devfest_demo/universal/dev_scaffold.dart';
 
 class SponsorPage extends StatelessWidget {
   static const String routeName = "/sponsor";
+
+  
 
   @override
   Widget build(BuildContext context) {
@@ -12,27 +14,57 @@ class SponsorPage extends StatelessWidget {
       body: ListView(
         children: <Widget>[
           SponsorImage(
-            imgUrl: "https://devfest.gdgkolkata.org/assets/img/logos/gd.png",
+            imgUrl: "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
+            
           ),
           SizedBox(
             height: 30,
           ),
           SponsorImage(
-            imgUrl: "https://devfest.gdgkolkata.org/assets/img/jetbrains.png",
-          ),
-          SizedBox(
-            height: 30,
-          ),
-          SponsorImage(
-            imgUrl:
-                "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Kotlin-logo.svg/220px-Kotlin-logo.svg.png",
+            imgUrl: "https://mumbai-devfest19.firebaseapp.com/images/logos/github-logo.png",
           ),
           SizedBox(
             height: 30,
           ),
           SponsorImage(
             imgUrl:
-                "https://images.g2crowd.com/uploads/product/image/large_detail/large_detail_0016c93c710cf35990b999cba3a59bae/firebase.png",
+                "https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_68187e2e4705f5b5474a094c0137b2e5/clevertap.png",
+          ),
+          SizedBox(
+            height: 30,
+          ),
+          SponsorImage(
+            imgUrl:
+                "https://mumbai-devfest19.firebaseapp.com/images/logos/byjus-logo.png",
+          ),
+          SizedBox(
+            height: 30,
+          ),
+          SponsorImage(
+            imgUrl:
+                "https://mumbai-devfest19.firebaseapp.com/images/logos/makers-logo.png",
+          ),
+          SizedBox(
+            height: 30,
+          ),
+          SponsorImage(
+            imgUrl:
+                "https://mumbai-devfest19.firebaseapp.com/images/logos/searce-logo.png",
+          ),
+          SizedBox(
+            height: 30,
+          ),
+          SponsorImage(
+            imgUrl:
+                "https://upload.wikimedia.org/wikipedia/commons/e/ed/Pepperfry_New_Logo.png",
+          ),
+          SizedBox(
+            height: 30,
+          ),
+          SponsorImage(
+            imgUrl:
+                "https://mumbai-devfest19.firebaseapp.com/images/logos/agrahyah-logo.png",
+                
           )
         ],
       ),
