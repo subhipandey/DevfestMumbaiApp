@@ -81,64 +81,20 @@ class Speaker {
 List<Speaker> speakers = [
   Speaker(
     speakerImage:
-        "https://avatars2.githubusercontent.com/u/1614870?s=460&v=4",
-    speakerName: "Romin Irani",
-    speakerDesc: "My passion is to help developers succeed",
-    speakerSession: "Level Up as a Developer",
-    
-    githubUrl: "https://github.com/rominirani",
-    twitterUrl: "https://twitter.com/iRomin",
-  ),
-  Speaker(
-    speakerImage:
-        "https://sessionize.com/image?f=475d4315df3c8424000efc8933be310d,400,400,True,False,7c-9ec9-4533-b50f-0b03493041d1.0bdfa3c1-b3dc-43ac-a823-925657ef776f.jpg",
-    speakerName: "Rivu Chakraborty",
-    speakerDesc: "Kotlin Evangelist, Author, Speaker, Community Person, Sr. Android Dev.",
-    speakerSession: "Let's Talk Composing UI",
-    
-    githubUrl: "https://github.com/RivuChk",
-    linkedinUrl: "https://www.linkedin.com/in/rivuchk/",
-    twitterUrl: "https://twitter.com/rivuchakraborty",
-  ),
-  Speaker(
-    speakerSession: "Scaling Frontend Development and Micro-Frontend Architecture",
-    speakerImage:
         "https://sessionize.com/image?f=bcede5a3a80070703471128fa4262bfa,400,400,True,False,5d-da47-4dee-9428-1ef0efb15c1f.172b43e2-0718-4e84-98ff-f94201e604d5.PNG",
     speakerName: "Aliakbar Attarwala",
     speakerDesc: "Front-end Architect - BookMyShow",
+    speakerSession: "Scaling Frontend Development and Micro-Frontend Architecture",
     
     githubUrl: "https://github.com/alliv8",
-    linkedinUrl: "",
     twitterUrl: "https://twitter.com/alliv8",
   ),
   Speaker(
-    speakerSession: "How to handle the Training Model Hangover",
-    speakerImage:
-        "https://sessionize.com/image?f=37b054f417d183224056a451f09fbe95,400,400,True,False,e6-7ed5-4a0a-a989-79f53f980674.bf55d10e-731d-4425-8201-2be0488539f9.jpg",
-    speakerName: "Pratik Parmar",
-    speakerDesc: "A Data Scientist who caught the travel bug.",
-    
-    githubUrl: "https://github.com/HackyRoot",
-    linkedinUrl: "https://www.linkedin.com/in/pratikparmar1/",
-    twitterUrl: "https://twitter.com/hackyroot",
-  ),
-  Speaker(
-    speakerSession: "DL-on-the-Edge",
-    speakerImage:
-        "https://sessionize.com/image?f=5f7adf94d877901e6972cb0b16d836d0,400,400,True,False,a3-a84e-4909-8a13-3b9eaef025b3.e6b2c1c5-5ec2-4420-a4ac-c3c913b0f040.jpg",
-    speakerName: "Indranil Chandra",
-    speakerDesc: "Innovator | Maker | Engineer | Researcher | I teach, preach and leverage ML/DL techniques to build meaningful products.",
-    
-    githubUrl: "https://github.com/indranildchandra",
-    linkedinUrl: "http://in.linkedin.com/in/indranildchandra",
-    twitterUrl: "https://twitter.com/IndranilChandra",
-  ),
-  Speaker(
-    speakerSession: "Effective DI for Multi Module Project",
     speakerImage:
         "https://sessionize.com/image?f=3b32f5b895502cfc94721839ee496d74,400,400,True,False,18-131f-4ff0-b644-43ba706b82e8.8d1b0d00-5caa-48bb-889d-94e931646e3c.jpg",
     speakerName: "Adit Lal",
     speakerDesc: "Adit is a Product Engineer, Android at GoJek. He is been working in the industry for close to 6 years. Some of his hobbies are Stargazing, Travel and Landscape Photography",
+    speakerSession: "Effective DI for Multi Module Project",
     
     githubUrl: "https://github.com/aldefy",
     linkedinUrl: "https://linkedin.com/in/aditlal",
@@ -155,7 +111,7 @@ List<Speaker> speakers = [
     linkedinUrl: "https://in.linkedin.com/in/ibhavikmakwana",
     twitterUrl: "https://twitter.com/ibhavikmakwana",
   ),
-  Speaker(
+ Speaker(
     speakerSession: "Scale your Web Application Securely on Compute Engine",
     speakerImage:
         "https://sessionize.com/image?f=08c586fb06ca3bde335b98ebc60d3cab,400,400,True,False,a1-84a6-409a-a6ee-849f10c6b9d3.9c35028b-1e91-4dea-874f-26b13029a983.jpg",
@@ -166,6 +122,29 @@ List<Speaker> speakers = [
     linkedinUrl: "https://in.linkedin.com/in/chiragnayyar",
     twitterUrl: "https://twitter.com/chiragnayyar",
   ),
+   Speaker(
+    speakerSession: "How to handle the Training Model Hangover",
+    speakerImage:
+        "https://sessionize.com/image?f=37b054f417d183224056a451f09fbe95,400,400,True,False,e6-7ed5-4a0a-a989-79f53f980674.bf55d10e-731d-4425-8201-2be0488539f9.jpg",
+    speakerName: "Pratik Parmar",
+    speakerDesc: "A Data Scientist who caught the travel bug.",
+    
+    githubUrl: "https://github.com/HackyRoot",
+    linkedinUrl: "https://www.linkedin.com/in/pratikparmar1/",
+    twitterUrl: "https://twitter.com/hackyroot",
+  ),
+  
+  Speaker(
+    speakerSession: "Level Up as a Developer",
+    speakerImage:
+        "https://avatars2.githubusercontent.com/u/1614870?s=460&v=4",
+    speakerName: "Romin Irani",
+    speakerDesc: "My passion is to help developers succeed.",
+    
+    githubUrl: "https://github.com/rominirani",
+    linkedinUrl: "",
+    twitterUrl: "https://twitter.com/iRomin",
+  ),
   Speaker(
     speakerSession: "Flutter in existing native apps",
     speakerImage:
@@ -173,6 +152,7 @@ List<Speaker> speakers = [
     speakerName: "Rahul Devanavar",
     speakerDesc: "The startup guy, always eager to experiment with new technology. Has 5 years of experience in mobile application development (Android, iOS, and Flutter).",
     
+    githubUrl: "",
     linkedinUrl: "https://www.linkedin.com/in/rahuldevanavar/",
     twitterUrl: "https://twitter.com/Rahuldeva91",
   ),
@@ -186,6 +166,17 @@ List<Speaker> speakers = [
     githubUrl: "https://github.com/ravirupareliya",
     linkedinUrl: "https://www.linkedin.com/in/ravi-rupareliya/",
     twitterUrl: "https://twitter.com/ravi_rupareliya",
+  ),
+  Speaker(
+    speakerSession: "Let's Talk Composing UI",
+    speakerImage:
+        "https://sessionize.com/image?f=475d4315df3c8424000efc8933be310d,400,400,True,False,7c-9ec9-4533-b50f-0b03493041d1.0bdfa3c1-b3dc-43ac-a823-925657ef776f.jpg",
+    speakerName: "Rivu Chakraborty",
+    speakerDesc: "Kotlin Evangelist, Author, Speaker, Community Person, Sr. Android Dev.",
+    
+    githubUrl: "https://github.com/RivuChk",
+    linkedinUrl: "https://www.linkedin.com/in/rivuchk/",
+    twitterUrl: "https://twitter.com/rivuchakraborty",
   ),
   Speaker(
     speakerSession: "Protocol Buffers: Is it worth the switch from JSON?",
