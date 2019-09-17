@@ -47,6 +47,17 @@ class SpeakersPage extends StatelessWidget {
               },
             ));
     }
+    if(speaker.twitterUrl!=null) {
+      iconButtons.add(IconButton(
+              icon: Icon(
+                FontAwesomeIcons.linkedin,
+                size: 15,
+              ),
+              onPressed: () {
+                launch(speaker.linkedinUrl);
+              },
+            ));
+    }
    return FittedBox(
         child: Container(
           constraints: BoxConstraints(minWidth: 230.0, minHeight: 25.0),
