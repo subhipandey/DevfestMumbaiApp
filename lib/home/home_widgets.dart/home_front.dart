@@ -1,9 +1,10 @@
 import 'package:devfest_demo/agenda/agenda_page.dart';
 import 'package:devfest_demo/config/config_bloc.dart';
 import 'package:devfest_demo/speakers/speaker_page.dart';
-import 'package:devfest_demo/sponsors/sponsors_page.dart';
-import 'package:devfest_demo/team/team_page.dart';
+import 'package:devfest_demo/sponsors/sponsor_page.dart';
 import 'package:devfest_demo/universal/image_card.dart';
+import 'package:devfest_demo/faq/faq_page.dart';
+import 'package:devfest_demo/team/team_page.dart';
 import 'package:devfest_demo/utils/devfest.dart';
 import 'package:devfest_demo/utils/tools.dart';
 import 'package:flutter/material.dart';
@@ -119,7 +120,8 @@ class HomeFront extends StatelessWidget {
             icon: Icons.question_answer,
             color: Colors.brown,
             title: Devfest.faq_text,
-            onPressed: () => {},
+            onPressed: () => 
+              Navigator.pushNamed(context, FaqPage.routeName),
           ),
           ActionCard(
             icon: Icons.map,
