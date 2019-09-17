@@ -1,11 +1,10 @@
 import 'dart:math';
 
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:devfest_demo/home/home_bloc.dart';
-import 'package:devfest_demo/home/home_state.dart';
 import 'package:devfest_demo/home/speaker.dart';
 import 'package:devfest_demo/universal/dev_scaffold.dart';
 import 'package:devfest_demo/utils/tools.dart';
+import 'package:devfest_demo/home/team.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -14,7 +13,7 @@ import 'package:url_launcher/url_launcher.dart';
 class TeamPage extends StatelessWidget {
   static const String routeName = "/team";
 
-  Widget socialActions(context) => FittedBox(
+  Widget socialActions(context, member) => FittedBox(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
@@ -24,7 +23,7 @@ class TeamPage extends StatelessWidget {
                 size: 15,
               ),
               onPressed: () {
-                launch(speakers[0].fbUrl);
+                launch(member.fbUrl);
               },
             ),
             IconButton(
@@ -33,7 +32,7 @@ class TeamPage extends StatelessWidget {
                 size: 15,
               ),
               onPressed: () {
-                launch(speakers[0].twitterUrl);
+                launch(member.twitterUrl);
               },
             ),
             IconButton(
@@ -42,7 +41,7 @@ class TeamPage extends StatelessWidget {
                 size: 15,
               ),
               onPressed: () {
-                launch(speakers[0].linkedinUrl);
+                launch(member.linkedinUrl);
               },
             ),
             IconButton(
@@ -51,7 +50,7 @@ class TeamPage extends StatelessWidget {
                 size: 15,
               ),
               onPressed: () {
-                launch(speakers[0].githubUrl);
+                launch(member.githubUrl);
               },
             ),
           ],
@@ -59,9 +58,7 @@ class TeamPage extends StatelessWidget {
       );
   @override
   Widget build(BuildContext context) {
-    var _homeBloc = HomeBloc();
-    var state = _homeBloc.currentState as InHomeState;
-    var teams = [];
+    
     return DevScaffold(
       body: ListView.builder(
         shrinkWrap: true,
@@ -114,18 +111,7 @@ class TeamPage extends StatelessWidget {
                           SizedBox(
                             height: 10,
                           ),
-                          Text(
-                            teams[i].desc,
-                            style: Theme.of(context).textTheme.subtitle,
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Text(
-                            teams[i].contribution,
-                            style: Theme.of(context).textTheme.caption,
-                          ),
-                          socialActions(context),
+                          socialActions(context, teams[i]),
                         ],
                       ),
                     )
