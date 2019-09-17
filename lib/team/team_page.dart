@@ -1,7 +1,6 @@
 import 'dart:math';
 
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:devfest_demo/home/speaker.dart';
 import 'package:devfest_demo/universal/dev_scaffold.dart';
 import 'package:devfest_demo/utils/tools.dart';
 import 'package:devfest_demo/home/team.dart';

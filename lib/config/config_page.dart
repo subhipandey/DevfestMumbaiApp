@@ -1,5 +1,6 @@
 import 'package:devfest_demo/agenda/agenda_page.dart';
 import 'package:devfest_demo/home/home_page.dart';
+import 'package:devfest_demo/map/map_page.dart';
 import 'package:devfest_demo/speakers/speaker_page.dart';
 import 'package:devfest_demo/sponsors/sponsors_page.dart';
 import 'package:devfest_demo/team/team_page.dart';
@@ -63,7 +64,8 @@ class _ConfigPageState extends State<ConfigPage> {
               AgendaPage.routeName: (context) => AgendaPage(),
               SpeakersPage.routeName: (context) => SpeakersPage(),
               SponsorPage.routeName: (context) => SponsorPage(),
-              TeamPage.routeName: (context) => TeamPage(),  
+              TeamPage.routeName: (context) => TeamPage(),
+              MapPage.routeName: (context) => MapPage() 
             },
           );
         },
