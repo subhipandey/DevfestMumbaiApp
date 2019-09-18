@@ -12,49 +12,53 @@ import 'package:url_launcher/url_launcher.dart';
 class TeamPage extends StatelessWidget {
   static const String routeName = "/team";
 
-  Widget socialActions(context, member) => FittedBox(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
-            IconButton(
-              icon: Icon(
-                FontAwesomeIcons.facebookF,
-                size: 15,
-              ),
-              onPressed: () {
-                launch(member.fbUrl);
-              },
-            ),
-            IconButton(
-              icon: Icon(
-                FontAwesomeIcons.twitter,
-                size: 15,
-              ),
-              onPressed: () {
-                launch(member.twitterUrl);
-              },
-            ),
-            IconButton(
-              icon: Icon(
-                FontAwesomeIcons.linkedinIn,
-                size: 15,
-              ),
-              onPressed: () {
-                launch(member.linkedinUrl);
-              },
-            ),
-            IconButton(
+  Widget socialActions(context, Team speaker) {
+    var iconButtons = new List<Widget>();
+    
+    if(speaker.githubUrl!=null) {
+      iconButtons.add(IconButton(
               icon: Icon(
                 FontAwesomeIcons.github,
                 size: 15,
               ),
               onPressed: () {
-                launch(member.githubUrl);
+                launch(speaker.githubUrl);
               },
-            ),
-          ],
+            ));
+    }
+
+    if(speaker.twitterUrl!=null) {
+      iconButtons.add(IconButton(
+              icon: Icon(
+                FontAwesomeIcons.twitter,
+                size: 15,
+              ),
+              onPressed: () {
+                launch(speaker.twitterUrl);
+              },
+            ));
+    }
+    if(speaker.twitterUrl!=null) {
+      iconButtons.add(IconButton(
+              icon: Icon(
+                FontAwesomeIcons.linkedin,
+                size: 15,
+              ),
+              onPressed: () {
+                launch(speaker.linkedinUrl);
+              },
+            ));
+    }
+   return FittedBox(
+        child: Container(
+          constraints: BoxConstraints(minWidth: 230.0, minHeight: 25.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: iconButtons,
+          ),
         ),
       );
+  }
   @override
   Widget build(BuildContext context) {
     
