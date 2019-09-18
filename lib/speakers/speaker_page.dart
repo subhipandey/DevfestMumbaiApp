@@ -11,6 +11,10 @@ import 'package:url_launcher/url_launcher.dart';
 class SpeakersPage extends StatelessWidget {
   static const String routeName = "/speakers";
 
+  SpeakersPage({ Key key }):super(key: key) {
+    speakers.sort((speaker1, speaker2) => speaker1.speakerName.compareTo(speaker2.speakerName));
+  }
+
   Widget socialActions(context, Speaker speaker) {
     var iconButtons = new List<Widget>();
     if(speaker.fbUrl!=null) {

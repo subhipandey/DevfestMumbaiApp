@@ -12,6 +12,10 @@ import 'package:url_launcher/url_launcher.dart';
 class TeamPage extends StatelessWidget {
   static const String routeName = "/team";
 
+  TeamPage({Key key}) : super(key: key) {
+    teams.sort((member1, member2) => member1.name.compareTo(member2.name));
+  }
+
   Widget socialActions(context, Team speaker) {
     var iconButtons = new List<Widget>();
     
